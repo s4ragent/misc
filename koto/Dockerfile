@@ -11,6 +11,7 @@ RUN ./autogen.sh \
 && make \
 && make install
 
+WORKDIR /
 RUN git clone https://github.com/koto-dev/koto.git
 WORKDIR koto
 RUN ./zcutil/fetch-params.sh \
